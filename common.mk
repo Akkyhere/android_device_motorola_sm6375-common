@@ -155,7 +155,9 @@ PRODUCT_PACKAGES += \
     gps.conf \
     izat.conf
 
-# Dolby
+# Sony Dolby + Dolby Vision
+TARGET_INCLUDES_DolbyVision := true
+TARGET_INCLUDES_OEM_App := true
 $(call inherit-product, hardware/dolby/dolby.mk)
 
 # Health
