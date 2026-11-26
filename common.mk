@@ -114,7 +114,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64
 
 # Charger
-WITH_LINEAGE_CHARGER := false
+WITH_LINEAGE_CHARGER := true
+PRODUCT_PACKAGES += \
+    charger
 
 # Device ID attestation
 PRODUCT_COPY_FILES += \
