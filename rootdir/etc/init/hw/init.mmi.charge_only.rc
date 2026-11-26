@@ -27,3 +27,12 @@ service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     socket thermal-recv-passive-client stream 0666 system oem_2907
     socket thermal-send-rule stream 0660 system oem_2907
     disabled
+
+service charger /system/bin/charger
+    class charger
+    user system
+    group system wakelock graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+    disabled
+    oneshot
